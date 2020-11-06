@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design for Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Google Fonts Roboto -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="css/mdb.min.css">
+    <!-- Your custom styles (optional) -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <br>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Create Order</h5>
+                        
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <h5>Detail</h5>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="row col-md-8 form-group">
+                                        <label for="name">Name *</label>
+                                        <select name="name" id="name" class="browser-default custom-select">
+                                        </select>
+                                    </div>
+                                    <div class="row col-md-6 form-group">
+                                        <label for="distribution">Distribution *</label>
+                                        <select name="distribution" id="distribution" class="browser-default custom-select">
+                                        </select>
+                                    </div>
+                                    <div id="detail_added" class="row">
+                                        <div class="form-group col-md-6">
+                                            <label for="payment">Payment Type *</label>
+                                            <select name="payment" id="payment" class="browser-default custom-select">
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="expired">Expired At *</label>
+                                            <input type="date" class="form-control" name="expired" id="expired" required>
+                                        </div>
+                                        <div class="form-group col-md-8">
+                                            <label for="note">Notes *</label>
+                                            <textarea name="note" id="note" class="form-control" cols="30" rows="4"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr id="divider_product">
+                            <div class="row" id="product_panel">
+                                <div class="col-md-3">
+                                    <h5>Products</h5>
+                                </div>
+                                <div class="col-md-9">
+                                    <div id="input_product">
+                                        <div class="row">
+                                            <div class="col-md-9 form-group">
+                                                <label for="product[0]">Product*</label>
+                                                <select name="product" id="product_0" class="browser-default custom-select product" data-index="0">
+                                                </select>
+                                            </div>
+                                            <div class="col-md-3 form-group">
+                                                <label for="unit">Unit*</label>
+                                                <select name="unit" id="unit_0" class="browser-default custom-select unit" data-index="0">
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-3 form-group">
+                                                <label for="quantity">Quantity*</label>
+                                                <input type="number" name="quantity" id="quantity_0" class="form-control quantity" data-index="0">
+                                            </div>
+                                            <div class="col-md-3 form-group">
+                                                <label for="price">Price*</label>
+                                                <input type="number" name="price" id="price_0" class="form-control total_price" data-index="0">
+                                            </div>
+                                            <div class="col-md-6 form-group">
+                                                <label for="total_price">Total Price*</label>
+                                                <input type="number" name="total_price" id="total_price_0" class="form-control total_price" readonly data-index="0">
+                                                <hr>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 offset-md-6 ">
+                                                <div class="row">
+                                                    <small>Total net price</small>
+                                                    <div class="col-md-2"></div>
+                                                    <small id="txt_net_total_0">0</small> 
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                    </div><button id="addProduct" class="btn btn-warning">New Add+</button>
+                                    <div class="row">
+                                        <div class="col-md-6 offset-md-6 ">
+                                            <div class="row">
+                                                <h5>Total</h5>
+                                                <div class="col-md-2"></div>
+                                                <h5 id="total">0</h5> 
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        <hr>
+                        <div class="col align-self-end">
+                            <div class="row justify-content-between">
+                                <div class="col-4">
+                                  
+                                </div>
+                                <div class="col-4">
+                                    <button type="button" class="btn btn-light" id="btnCancel">Cancel</button>
+                                    <button type="button" class="btn btn-success" id="btnSuccess" disabled="disabled">Confirm</button>
+                                </div>
+                            </div>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <!-- jQuery -->
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="js/mdb.min.js"></script>
+    <script src="js/api.js"></script>
+</body>
+</html>
